@@ -1,32 +1,25 @@
 <template>
-  <!-- 入口逻辑处理 -->
   <div class="index-page">
-    Hello World !
+	<welcome></welcome>
   </div>
 </template>
 
 <script>
   import Vue from 'vue';
   import Component from 'vue-class-component';
-
+  import Welcome from '../../components/views_components/welcome'
   @Component({
     components:{
-      
+		Welcome
 	},
 	props:{
 		
 	}
   })
   export default class HomePage extends Vue {
-   
+	  
   }
 </script>
 <style lang="scss" scoped>
-.index-page{
-	width: 100%;
-	margin-top: 20%;
-	color: #fff;
-	font-size: 44px;
-	text-align: center;
-}
+
 </style>

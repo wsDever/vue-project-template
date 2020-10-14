@@ -70,8 +70,8 @@ let config = {
         loader: 'vue-loader'
       },
       {
-        test: /\.scss$/,
-        include: [setPath('src')],
+        test: /\.(scss|css)$/,
+		include: [setPath('src'), setPath('node_modules')],
         use: [
           ENV === 'development' ? 'vue-style-loader' : ExtractCssChunks.loader,
           {
@@ -114,12 +114,7 @@ let config = {
           limit: 10000,
           name: 'fonts/[name].[hash:5].[ext]'
         }
-      },
-      {
-        test: /\.css$/,
-        include: setPath('node_modules'),
-        loader: 'css-loader',
-      },
+      }
     ]
   },
 
@@ -186,7 +181,7 @@ if (ENV === 'development') {
     clientLogLevel: 'warning',
     hot: true,
     host: '0.0.0.0',
-    port: '8081',
+    port: '8090',
     stats: {
       assets: true,
       performance: true,

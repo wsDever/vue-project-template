@@ -15,6 +15,7 @@ import Component from "vue-class-component";
   
   }
 })
+
 export default class App extends Vue {
   mounted() {
 
@@ -25,12 +26,5 @@ export default class App extends Vue {
 }
 </script>
 <style lang="scss">
-	*{
-		padding: 0;
-		margin: 0;
-	}
-	body{
-		width: 100%;
-		background: rgba(33,33,33,0.8);
-	}
+
 </style>
