@@ -9,7 +9,7 @@
 				<a-button type="primary" @click="showMessage">
 					I konw !
 				</a-button>
-				<a-button>
+				<a-button @click="showToast">
 					Thanks !
 				</a-button>
 			</template>
@@ -35,7 +35,10 @@ export default class  extends Vue{
 
 
 	showMessage(){
-		this.$message.info("hello world")
+		this.$message.info("三方组件仓使用成功")
+	}
+	showToast(){
+		this.$wsuiToast({ message: "自定义组件使用成功", position: "middle" })
 	}
 }
 </script>
@@ -43,6 +46,6 @@ export default class  extends Vue{
 
 <style lang='scss' scoped>
 .welcome-box{
-	padding-top: 200px;
+	padding-top: 160px;
 }
 </style>

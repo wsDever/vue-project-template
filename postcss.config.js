@@ -2,7 +2,7 @@ module.exports = {
   // parser: 'sugarss',
   plugins: {
     'postcss-pxtorem': {
-      rootValue: 17.9,
+      rootValue: 16,
       unitPrecision: 2,
       propWhiteList: ['*'],
       selectorBlackList: ['.no-rem'],

@@ -41,6 +41,10 @@ let config = {
       '@config': setPath('src/configs'),
       '@router': setPath('src/routers'),
 	  '@page': setPath('src/pages'),
+	  '@store': setPath('src/stores'),
+	  '@javascript': setPath('src/javascripts'),
+	  '@baseComp': setPath('src/components/base_components'),
+	  '@viewComp': setPath('src/components/views_components')
 		//   ...
     },
     extensions: ['.ts', '.vue', '.js', '.scss', '.css']

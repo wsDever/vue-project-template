@@ -7,7 +7,7 @@
 <script>
   import Vue from 'vue';
   import Component from 'vue-class-component';
-  import Welcome from '../../components/views_components/welcome'
+  import Welcome from '@viewComp/welcome'
   @Component({
     components:{
 		Welcome
@@ -17,7 +17,10 @@
 	}
   })
   export default class HomePage extends Vue {
-	  
+	  created(){
+		//   说明
+		//   需要在页面中 完成对 httpEvbus 事件的绑定及具体实现
+	  }
   }
 </script>
 <style lang="scss" scoped>

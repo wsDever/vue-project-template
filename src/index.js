@@ -2,19 +2,24 @@
 import Vue from 'vue';
 import App from './app';
 import { router } from '@router/';
-import {Button, message, Result} from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
-
-Vue.use(Button).use(message).use(Result);
-
-Vue.prototype.$message = message;
+import initUi from '@javascript/ui.js';
+import Evbus from '@javascript/evbus'
+// 初始化Ui 
+initUi()
 
 console.log('当前运行环境:', __ENV__);
 
-new Vue({
-	el: '#app',
-	router,
-	render: h => h(App)
-});
+// 全局事件管理中心
+Vue.prototype.$App = {
+	// Config,
+	Ev: new Evbus()
+};
 
-
+import('@javascript/middleware').then(res => {
+	res.default.initApp();
+	new Vue({
+		el: '#app',
+		router,
+		render: h => h(App)
+	});
+})
