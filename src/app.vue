@@ -15,7 +15,7 @@ import Component from "vue-class-component";
 import NetCheck from '@viewComp/net_check';
 @Component({
   components: {
-  
+  	NetCheck
   }
 })
 
