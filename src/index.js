@@ -11,7 +11,6 @@ console.log('当前运行环境:', __ENV__);
 
 // 全局事件管理中心
 Vue.prototype.$App = {
-	// Config,
 	Ev: new Evbus()
 };
 

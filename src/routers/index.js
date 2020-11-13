@@ -4,6 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 let routeArr = []
+
 let files = require.context('../pages', true, /index.vue$/);
 // 只读一级子目录
 let pages = files.keys().filter(item => item.split("/").length == 3);
@@ -21,11 +22,11 @@ pages.forEach(item => {
 })
 
 // 对routerArr 添加 404  index 等路由
+// 生产环境下删除测试路由等
 
 let router = new Router({
   mode:'history',
   routes: [ ...routeArr ]
-	
 });
 
 /**
